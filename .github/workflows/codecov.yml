@@ -15,10 +15,15 @@ jobs:
     # The type of runner that the job will run on
     runs-on: macos-latest
 
+    strategy:
+      matrix:
+        api-level: [33]
+        java-version: [11]
+
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
       - name: Add local.properties
         run: |
@@ -59,7 +64,7 @@ jobs:
       - name: Unit Test with Android Emulator Runner
         uses: ReactiveCircus/android-emulator-runner@v2
         with:
-          api-level: 33
+          api-level: ${{ matrix.api-level }}
           script: ./android-app/gradlew connectedCheck
 
       - name: generate report

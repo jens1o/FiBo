@@ -72,15 +72,15 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: report
-          path: ./android-app/app/build/reports/coverage/debug
+          path: ./android-app/app/build/reports/coverage/androidTest
 
       - name: Download Test Reports Folder
         uses: actions/download-artifact@v2
         with:
           name: report
-          path: ./android-app/app/build/reports/coverage/debug
+          path: ./android-app/app/build/reports/coverage/androidTest
 
       - name: Upload Test Report
         uses: codecov/codecov-action@v2
         with:
-          files: "./android-app/app/build/reports/coverage/debug/report.xml"
+          files: "./android-app/app/build/reports/coverage/androidTest/report.xml"

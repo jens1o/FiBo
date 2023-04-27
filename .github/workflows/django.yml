@@ -83,4 +83,4 @@ jobs:
       - name: Upload HTML Test Report to Codecov
         uses: codecov/codecov-action@v2
         with:
-          files: ./simple_test_coverage_report/*
+          files: ./simple_test_coverage_report/simple_test_coverage_report

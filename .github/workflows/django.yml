@@ -73,7 +73,7 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: simple_test_coverage_report
-          path: ./simple_test_coverage_report
+          path: ./simple_test_coverage_report.txt
 
       - name: Upload HTML Test Report to Codecov
         uses: codecov/codecov-action@v2

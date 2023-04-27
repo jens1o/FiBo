@@ -65,7 +65,8 @@ jobs:
         uses: ReactiveCircus/android-emulator-runner@v2
         with:
           api-level: ${{ matrix.api-level }}
-          script: ./android-app/gradlew connectedCheck
+          working-directory: ./android
+          script: ./gradlew connectedCheck
 
       - name: generate report
         uses: actions/upload-artifact@v2

@@ -72,7 +72,7 @@ jobs:
       - name: Download HTML Test Coverage Report
         uses: actions/download-artifact@v2
         with:
-          name: report
+          name: html_test_coverage_report
           path: backend/docs/html-test-coverage-report
 
       - name: Upload HTML Test Report to Codecov

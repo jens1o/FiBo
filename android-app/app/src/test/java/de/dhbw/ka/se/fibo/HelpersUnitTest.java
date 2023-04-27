@@ -1,6 +1,8 @@
 package de.dhbw.ka.se.fibo;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertNotEquals;
 
 import org.junit.Test;
 
@@ -12,7 +14,7 @@ import java.math.BigDecimal;
  * @see <a href="http://d.android.com/tools/testing">Testing documentation</a>
  */
 public class HelpersUnitTest {
-  
+
 
   @Test
   public void testFormatBigDecimalCurrency(){

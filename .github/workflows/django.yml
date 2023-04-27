@@ -51,7 +51,7 @@ jobs:
         run: |
           cd backend
           touch simple_test_coverage_report
-          docker compose run --rm django coverage xml > coverage.xml
+          docker compose run --rm django coverage xml
 
       - name: Upload Simple Test Coverage Report
         uses: actions/upload-artifact@v3

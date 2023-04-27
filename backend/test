@@ -1,0 +1,23 @@
+Name                             Stmts   Miss  Cover
+----------------------------------------------------
+api/__init__.py                      0      0   100%
+api/admin.py                         8      0   100%
+api/apps.py                          4      0   100%
+api/migrations/0001_initial.py       9      0   100%
+api/migrations/__init__.py           0      0   100%
+api/models.py                       26      0   100%
+api/serializers.py                  26      0   100%
+api/tests/__init__.py                0      0   100%
+api/tests/test_models.py            60      0   100%
+api/tests/test_settings.py          28      0   100%
+api/tests/test_urls.py              35      0   100%
+api/tests/test_views.py            226      0   100%
+api/urls.py                          4      0   100%
+api/views.py                       120      0   100%
+backend/__init__.py                  0      0   100%
+backend/migrations/__init__.py       0      0   100%
+backend/settings.py                 29      0   100%
+backend/urls.py                      5      0   100%
+manage.py                           12      2    83%
+----------------------------------------------------
+TOTAL                              592      2    99%

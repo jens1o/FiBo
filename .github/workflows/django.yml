@@ -75,7 +75,8 @@ jobs:
           name: simple_test_coverage_report
           path: ./simple_test_coverage_report
 
-      - runs: |
+      - name: debug
+        run: |
           ls
           ls ./simple_test_coverage_report/*
 

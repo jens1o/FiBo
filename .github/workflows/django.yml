@@ -51,36 +51,27 @@ jobs:
         run: |
           cd backend
           touch simple_test_coverage_report
-          docker compose run --rm django coverage report > simple_test_coverage_report
-          docker compose run --rm django coverage html -d docs/html-test-coverage-report
-          mv simple_test_coverage_report docs/
+          docker compose run --rm django coverage run > coverage
 
       - name: Upload Simple Test Coverage Report
         uses: actions/upload-artifact@v3
         with:
           name: simple_test_coverage_report
-          path: backend/docs/simple_test_coverage_report
-          retention-days: 90
-
-      - name: Upload HTML Test Coverage Report
-        uses: actions/upload-artifact@v3
-        with:
-          name: html_test_coverage_report
-          path: backend/docs/html-test-coverage-report
+          path: coverage
           retention-days: 90
 
       - name: Download Simple Test Coverage Report
         uses: actions/download-artifact@v2
         with:
-          name: html_test_coverage_report
-          path: ./html_test_coverage_report
+          name: simple_test_coverage_report
+          path: ./coverage
 
       - name: debug
         run: |
           ls
-          ls ./html_test_coverage_report/*
+          ls ./*
 
       - name: Upload HTML Test Report to Codecov
         uses: codecov/codecov-action@v2
         with:
-          files: ./html_test_coverage_report/*
+          files: ./coverage/*
